@@ -39,7 +39,7 @@ class Solution:
         helper(root, 0)
         return levels
 
-    def levelOrderIterative(self, root)
+    def levelOrderIterative(self, root):
         levels = []
         if not root: 
             return levels
@@ -53,16 +53,29 @@ class Solution:
             for i in range(level_length):
                 node = queue.popleft()
                 levels[level].append(node.val)
-
                 if node.left:
                     queue.append(node.left)
-
                 if node.right:
                     queue.append(node.right)
 
             level += 1
         return levels
 
+    def zigZagBFS(self, root):
+        res = []
+        level_list = deque()
+        if not root:
+            return res
+
+        node_queue = deque([root, None])
+        zigging = True
+
+        while len(node_queue) > 0:
+            curr_node = node_queue.popleft()
+
+            if :
+
+        return res
 
 
 
